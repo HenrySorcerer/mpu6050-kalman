@@ -1,0 +1,22 @@
+# Ignore build output and intermediate files
+*.o
+*.d
+*.lst
+*.crf
+*.axf
+*.hex
+*.map
+*.lnp
+*.htm
+*.dep
+
+# Ignore runtime and configuration directories
+RTE/
+DebugConfig/
+
+# Ignore IDE-specific files
+*.uvguix.*
+*.uvoptx
+
+# Ignore VSCode folder
+.vscode/
