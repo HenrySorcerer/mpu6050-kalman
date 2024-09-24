@@ -102,11 +102,7 @@ int main(void)
   char buffer[50];
   MPU6050_t data;
   MPU6050_Init();
-  // OLED_PrintASCIIString(0, 0, "a", &afont8x6, OLED_COLOR_NORMAL);
-  // OLED_ShowFrame();
-  
-  // OLED_PrintASCIIString(0, 0, "buffer", &afont8x6, OLED_COLOR_NORMAL);
-  // OLED_ShowFrame();
+
 
   /* USER CODE END 2 */
 
@@ -118,12 +114,11 @@ int main(void)
     MPU6050_Read_All(&data);
     sprintf(buffer, "roll: %f", data.KalmanAngleX);
     OLED_PrintASCIIString(0, 0, buffer, &afont8x6, OLED_COLOR_NORMAL);
-
-    
     sprintf(buffer, "pitch: %f", data.KalmanAngleY);
     OLED_PrintASCIIString(0, 10, buffer, &afont8x6, OLED_COLOR_NORMAL);
 
-
+    //新增一行代码用于测试git版本回退,无实际意义
+    OLED_PrintASCIIString(0, 20, "git-test", &afont8x6, OLED_COLOR_NORMAL);
 
     // 刷新 OLED 显示
     OLED_ShowFrame();
